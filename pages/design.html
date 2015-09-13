@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hand Gesture Controlled Quadcopter Documentation</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- <script src="scripts/functions.js"></script> -->
+    <!-- <script src="scripts/variables.js"></script> -->
+    <!-- <script src="scripts/bootstrap-cols.js"></script> -->
+    <!-- <script src="scripts/array.js"></script> -->
+    
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right nav-main-nav">
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Docs <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="resultanddiscussion.html">Results and Discussion</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- nav -->
+
+<div class="row row-banner row-banner-page">	
+	<div class="container container-banner">
+		<div class="col-md-4">
+			<a href="../index.html"><img src="../design/bower/drone1.png" alt="" /></a>
+		</div><!-- col-md-4 -->
+		<div class="col-md-8">
+			<h1 class="bold letter-spacing-narrow color-red">Introduction</h1>		
+		</div><!-- col-md-8 --> 
+	</div>
+	<!-- container-banner -->
+</div><!-- row-banner -->
+
+<div class="row row-content">
+	<div class="container container-content">
+		<div class="col-md-4 col-md-4-navigation">
+			<nav class="nav-side-nav" >
+				<ul class="ul-side-nav">
+		            <li><a href="introduction.html">Introduction</a></li>
+		            <li><a href="design.html">Design</a></li>
+		            <li><a href="implementation.html">Implementation</a></li>
+		            <li><a href="resultanddiscussion.html">Results and Discussion</a></li>
+		            <li><a href="conclusion.html">Conclusion</a></li>
+				</ul>
+			</nav>
+		</div><!-- col-md-4-navigation -->
+		<div class="col-md-8 col-md-8-content">
+			<h3 class="h3-subtitle-first bold">Project Description</h3>
+			<p>We proposed a system which is complete package and will solve all the problems of
+providing quick emergency assistance. The proposed system was widely accepted by the
+faculty members and approved.
+Figure</p>
+			<p>Our system has a Quadcopter with a gyro control chip which controls the basic
+maneuvers for the UAV and we propose to build a custom designed chip to decode
+the signals coming from the on-board android smartphone and send commands to the
+controller chip. We used a android smartphone to provide the quadcopter with GPS,
+Camera, and 4G internet connection. So this quadcopter is now capable of performing completely unmanned 
+ight and be controlled using http requests coming to it through
+4G connection. The quadcopter also provides a http feedback to the computer about
+its GPS position. The GPS can also be used to make a 
+ight plan for the quadcopter.
+The on-board mobile also provides a UDP live stream of the camera vision and can be
+controlled using.</p>
+
+			<p>Lets take a typical emergency assistance scenario and apply our proposed solution
+to it. A call comes to the police about a car accident that has happened on a highway
+in Abu Dhabi. This is emergency case it might take several hours for the police to
+arrive and analyze the situation. The police places a pin on the map in the quadcopter
+software in computer. The computer sends the http request to the quadcopter to move
+to that specic location. The quadcopter immediately starts up and goes to the GPS
+location. This is done with a feedback loop which calculates the current GPS location
+and the required GPS location. While all of this is done, the policeman can see the
+current location of the quadcopter on the map. When the quadcopter reaches the end of
+its destination, the policeman turns on the gesture control mode and starts controlling
+the movement of the quadcopter precisely using hand. Now the policeman can access
+the situation and can also possibly drop the rst aid kit if the situation is too serious.</p>
+
+			<h3 class="h3-subtitle bold">Using a UAV for agility and accessibility</h3>
+			<p>Unmanned Air Vehicles are light, fast and can be designed to carry the essential
+aid equipment. Along with that unmanned vehicles can be used to perform critical
+operations in areas where human life cannot be risked. Furthermore, quick response
+to a distress call can dierentiate between life and death of a person. Therefore, air
+emergency medical assistance is needed very quickly in some cases and the delay cased
+by set-up and start of manned vehicles cannot be aorded at this point.</p>
+			
+			<h3 class="h3-subtitle bold">Use of a quadcopter for ease of control and high payload delivery</h3>
+			<p>With the use of four propellers pushing the air downwards with immense speed, a
+typical quadcopter is capable of lifting high payloads. UAVs for search and rescue oper-
+ations are required to be small and at the same time carry high payloads. Quadcopter
+is perfect for such kinds of ease of control applications because of its usage of four high
+rpm brushless motor run propellers. These brushless motor speeds can be intelligently
+varied to provide 6 degrees of freedom by sensing the gyroscopic values of Pitch, Yaw,
+and roll which.</p>
+
+			<p>The quadcopter can be controlled using two types of congurations, one is the X
+conguration and the other is the + conguration. For a very stable 
+ight and camera
+view being not blocked, we propose to use a X conguration quadcopter.
+Figure 2.2: X conguration for-
+ward motion</p>
+
+		<p><p class="label label-success">Forward Direction:</p> By speeding up the back motors, a forward direction motion
+can be accomplished. This makes the thrust of the motors at an angle to the z-axis.
+The thrust has force components in the weight direction to balance or cancel the weight
+and a unbalanced forward component to make the quadcopter go forward.</p>
+
+		<p><p class="label label-success">Left Direction: </p> By speeding up the right motors, a left direction motion can be
+accomplished. The thrust has force components in the weight direction to balance or
+cancel the weight and a unbalanced forward component to make the quadcopter go left.</p>
+
+		<p><p class="label label-success">Right Direction:</p> By speeding up the left motors, a right direction motion can be
+accomplished. The thrust has force components in the weight direction to balance or
+cancel the weight and a unbalanced forward component to make the quadcopter go right.</p>
+
+		<p><p class="label label-success">Backward Direction: </p>By speeding up the front motors, a backward direction motion
+can be accomplished. This makes the thrust of the motors at an angle to the z-axis.
+The thrust has force components in the weight direction to balance or cancel the weight
+and a unbalanced backward component to make the quadcopter go forward.</p>
+
+		<h3 class="h3-subtitle bold">Global control by using on-board 4G smartphone</h3>
+		<p>Usually quadcopters have a limited range radio link but emergency assistance should
+not have limited range of control. It was decided to use 4G network for control and
+communication with the quadcopter as 4G network is accessible from within 35Km range
+of a cellular tower. Furthermore, a typical city is divided into cells and at almost each
+node a telecommunication tower is located. This is a huge advantage for our quadcopter
+since it can have a connection to base control all around the city where the 3G radiation
+pattern is in range. A smartphone will be mounted on the quadcopter for providing
+a 4G internet connection. The internet connection on the quadcopter can be used for
+several things such as providing the GPS location, video stream, and controlling the
+quadcopter maneuvers.</p>
+
+		<h3 class="h3-subtitle bold">Live streaming video vision by using UDP</h3>
+		<p>Video streaming of quadcopter's vision is possible by using the on-board android
+smartphone. An app it to be designed in such a way that it streams video back to the base station by use of UDP. This is possible through 4G connectivity since use of WiFi
+for such long range is not advisable.</p>
+		<p>A video stream is acceptable if there is any fault of packages lost in the way. It
+is because if during the video streaming the packages get lost due to the router being
+overloaded for instance then the video streaming can still be resumed with a reduced
+quality.</p>
+		<p>The TCP/IP protocol would force the video stream to wait until the dropped packages
+are found to resume processing newer packages. The point that is usually misunderstood
+is that when few packages are lost it doesn't mean a whole frame is lost but rather few
+pixels from a certain frame are lost and hence waiting for these lost pixels to come back
+is a waste since the video stream has already moved on to new frames. However TCP
+could have been a good option if the case was about recorded video streaming since
+when a package is lost the system pauses the frame until the all the data for the next
+frame has been collected in the buer giving the term `buering'.</p>
+		<p>Therefore, we decided to use UDP for our live video streaming.</p>
+		
+		<!-- Smartphone to Controller Board USB Connection  -->
+		
+		<h3 class="h3-subtitle bold">Smartphone to Controller Board USB Connection</h3>
+		<p>The receiver in our schematics is going to be a smartphone which will be using 4G
+internet to receive the data. The smartphone onboard the quadcopter will act as client
+while the PC with the user will act as the server to send the controls. The data will
+then be passed to an Atmega328 chip using USB-Serial FTDI chip that will in turn send
+the 
+ight data to controller board. The application will send byte array through serial
+to Atmega328 Chip that will contain the 
+ight values such as aileron value to control
+the roll, elevation value to control the elevation angle with horizontal, rudder value to
+control the yaw movement, and thrust value to control lift force.</p>
+
+		<!-- Hand-Gesture Models -->
+		<h3 class="h3-subtitle bold">Hand Gesture Models</h3>
+		<p>In order to control the quad-copter using a leap motion device, a model of the hand
+gestures should be made in order to approximate the nger positions in three dimensional
+space.</p>
+		<p>Leap Motion provides a library to use for creating hand objects and approximates
+the nger positions in the 3 dimensional space. According to these positions of the
+ngers, we can code the Leap Motion to generate http requests to the android on the
+quad-copter through internet.</p>
+		<p>We will program a java application to detect the hand gestures and then according
+to the gesture input, a particular http request will be made to the android. Eclipse
+IDE will be used to program the desktop application which will provide the internet
+connection to the quad-copter.</p>
+
+		<!-- Kalman Filter -->
+		<h3 class="h3-subtitle bold">Kalman Filter</h3>
+		<p>There is a module in the controller board that processes the huge amount of samples
+the microprocessors take from the sensors. To put that into perspective let's say one have
+a micro-controller that has a clock speed of 15 MHz, that means the micro-controller
+will be taking 15 million samples from the sensor every second. All this amount of data
+is meaningless if the right data is not processed from this, Kalman Filter is a sequence of
+steps that will initially remove the sampled data that are purely noise and then average
+out the important data to pick the most appropriate one for input.</p>
+		<p>The leap motion captures about 200 frames per second or more depending upon the
+computer processing power. This is huge data speed and sudden errors can cause the
+system to In our project, we will implement a Kalman Filter on the hand gesture data.</p>
+
+
+
+	
+		
+		
+
+
+
+
+
+			
+
+
+		</div><!-- col-md-8-content -->
+	</div>
+</div>
+
+
+
+
+</body>
+
+</html>    

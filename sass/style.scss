@@ -1,0 +1,168 @@
+body{
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container{
+  max-width: 1500px;
+  
+}
+
+/* Color */
+
+// blue: #00acee
+// red: #ef5734
+// green: #2baf2b
+// yellow: #ffcc2f
+// brown: #543729
+
+/* Typography */
+
+a{
+  color: #00acee;
+}
+a:hover{
+  text-decoration: none;
+  color: #ef5734;
+}
+
+.bold{
+  font-weight: bold;
+}
+.letter-spacing-narrow{
+  letter-spacing: -0.04em;
+}
+
+.color-red{
+  color: #ef5734;
+}
+.background-color-red{
+  background-color: #ef5734;
+}
+.date{
+  padding: 10px;
+  background-color: #ffcc2f;
+  color: white;
+  border-radius: 5px;
+}
+
+.lead{
+  font-size: 1.6em;
+  line-height: 1.25;
+}
+
+.subtitle{
+  margin: 2.4px 0 0.8px 0;  
+}
+.h3-subtitle-first{
+  color: #2baf2b;
+  font-size: 1.6em;
+  margin: 0 0 0.8em 0;
+  // font-weight: bold;
+}
+
+/* --- */
+
+
+/* Utility */
+
+.vertical-center{
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  
+  display: flex;
+  align-items: center;
+}
+
+
+
+.navbar{
+  // background-color: #ffcc2f;
+  margin-bottom: 0;
+  
+  ul.nav-main-nav, .dropdown-menu{
+    // padding: 20px 0;
+    li{
+      margin: 10px 0;      
+    }
+  }
+   
+  a, .dropdown-menu > li > a{
+    font-weight: bold !important;
+    color: #2baf2b !important;
+    border-radius: 4px !important;
+    padding: 3.2px 15px !important;
+  }
+  a:hover{
+    background-color: white !important;
+    
+  }
+  
+  .dropdown-menu > li > a:hover{
+    background-color: #ffcc2f !important;
+    background-image: none;
+    
+  } 
+  
+}
+
+
+.row-banner{
+  background-color: #ffcc2f;
+  padding: 40px 0;
+  
+  h1{
+    font-size: 100px; 
+  }
+  
+  h3{
+    font-size: 48px;  
+  }
+  
+  img{
+    max-width: 340px; 
+    padding-left: 110px; 
+  }
+}
+
+.row-banner-page{
+  img{
+    max-width: 200px;
+  }  
+}
+
+
+
+.row-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+     
+   img{
+     max-width: 200px; 
+   }  
+}
+
+
+.row-content{
+  padding: 40px 0;
+  
+  .ul-side-nav{
+    li{
+      list-style: none;
+      padding: 0.2em 0;
+      
+      a{
+        text-decoration: none;
+        color: #00acee;
+        font-weight: bold ;   
+        border-radius: 4px; 
+        padding: 0.2em 0;
+      }
+      a:hover{
+        text-decoration: underline;
+        
+      }
+    }
+  }
+}
+
