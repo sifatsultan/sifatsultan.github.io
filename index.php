@@ -27,6 +27,7 @@
     require_once 'FileMaker.php';
     # instantiate a new FileMaker object
     $sportslogin = new FileMaker(FM_FILE, FM_HOST, FM_USER, FM_PASS);
+
     /***********************************
     QUERY PLAYER STATS AVGMETRESPERCARRY
     ************************************/
@@ -53,7 +54,7 @@
     //[doubt]
     // fmsSetLastPage($personnel_result,'Tplayers2',3);
     //pull the rows out of the query into {personnel_row}
-    $personnel_row = current($personnel_result->getRecords());
+    // $personnel_row = current($personnel_result->getRecords());
 
     ?>
 
@@ -108,13 +109,25 @@
   <div class="row row-content">
   	<div class="container container-content">
   		<div class="col-md-8 col-md-8-content">
-        <?php
-        var_dump($personnel_row);
 
-        // foreach ($personnel_row) {
-        //   $p="<p class='lead'>".$personnel_row->
-        // }
-        ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Tries</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            foreach ($personnel_result->getRecords() as $personnel2_row) {?>
+              <tr>
+                <th scope="row"><?= $personnel2_row->getField('R_tries'); ?></th>
+                <td width="45" align="left" ><span class="style4"><?php echo $personnel2_row->getField('fplayer_name'); ?></span></td>
+              </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+
         <p class="lead"><?php echo 'Hello'?></p>
         <div class="post">
           <div class="row vertical-center">
