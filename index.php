@@ -10,10 +10,55 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
     <!-- <script src="scripts/functions.js"></script> -->
     <!-- <script src="scripts/variables.js"></script> -->
     <!-- <script src="scripts/bootstrap-cols.js"></script> -->
     <!-- <script src="scripts/array.js"></script> -->
+
+    <?php
+
+    define('FM_HOST', '127.0.0.1');
+    define('FM_FILE', 'sportsdev');
+    define('FM_USER', 'sifatsultan');
+    define('FM_PASS', 'pizzahut20');
+
+    # this is the include for the API for PHP
+    require_once ('FileMaker.php');
+    # instantiate a new FileMaker object
+    $sportslogin = new FileMaker(FM_FILE, FM_HOST, FM_USER, FM_PASS);
+    /***********************************
+    QUERY PLAYER STATS AVGMETRESPERCARRY
+    ************************************/
+
+    //find 'Tplayers2'
+    $personnel_find=$sportslogin->newFindCommand('Tplayers2');
+    //build query array
+    $personnel_findCriterions = array(
+        'fteam_name'=>"Waratahs"
+    );
+    foreach($personnel_findCriterions as $key=>$value){
+        $personnel_find->AddFindCriterion($key,$value);
+    }
+    //[doubt]
+    // fmsSetPage($personnel_result,'Tplayers2',3);
+    //sort data by 'avg metres per carry'
+    $personnel_find->addSortRule("R_avgmetrespercarry",1,FILEMAKER_SORT_DESCEND);
+    //execute query
+    $personnel_result=$personnel_find->execute();
+    // if(FileMaker::isError($personnel_result)){
+    //     // fmsTrapError($personnel_result,"error.php");
+    //     echo "Error";
+    // }
+    //[doubt]
+    // fmsSetLastPage($personnel_result,'Tplayers2',3);
+    //pull the rows out of the query into {personnel_row}
+    $personnel_row = current($personnel_result->getRecords());
+
+    ?>
+
+
+
 
 </head>
 
@@ -63,6 +108,13 @@
   <div class="row row-content">
   	<div class="container container-content">
   		<div class="col-md-8 col-md-8-content">
+        <?php
+        var_dump($personnel_row);
+
+        // foreach ($personnel_row) {
+        //   $p="<p class='lead'>".$personnel_row->
+        // }
+        ?>
         <p class="lead"><?php echo "Hello"?></p>
         <div class="post">
           <div class="row vertical-center">
